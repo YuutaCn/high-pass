@@ -3,10 +3,29 @@
 :root {
   // base
   --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --content-width: 1290px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --burnt-orange-color: #FF6E30;
+  --fier-orange-color: #BC572B;
+  --harley-orange-color: #CE4307;
+  --bittersweet-color: #F06666;
+  --red-orange-color: #FF3030;
+  --tuft-bush-color: #FFD4C1;
+  --black-color: #202020;
+  --white-color: #FFFFFF;
+
+  // animation
+  --default-cubic: cubic-bezier(.26,.45,.3,.84);
 }
+
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    --content-width: 1024px;
+    --container-offset: 30px;
+  }
+}
+
