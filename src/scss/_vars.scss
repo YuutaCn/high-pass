@@ -29,3 +29,9 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --content-width: 768px;
+    --container-offset: 28px;
+  }
+}

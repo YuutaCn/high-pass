@@ -1,6 +1,9 @@
 .footer {
   width: 100%;
   background: var(--black-color);
+  @include small-tablet {
+    display: none;
+  }
 }
 .footer__container {
   width: 100%;
@@ -116,5 +119,11 @@
     grid-column: 7/9;
     left: 40px;
     bottom: 0;
+  }
+}
+
+@include small-tablet {
+  .first-nav {
+    display: none;
   }
 }

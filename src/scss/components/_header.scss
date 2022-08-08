@@ -25,6 +25,9 @@
   @include tablet {
     gap: 6px;
   }
+  @include small-tablet {
+    gap: 6px;
+  }
   img {
     @include tablet {
       width: 26.18px;
@@ -38,6 +41,9 @@
     font-size: 31px;
     @include tablet {
       font-size: 26px;
+    }
+    @include small-tablet {
+      font-size: 25px;
     }
   }
 }
@@ -122,6 +128,18 @@
     }
     &:active {
       border-bottom: solid 1px var(--harley-orange-color);
+    }
+  }
+}
+
+@include small-tablet {
+  .search {
+    grid-column: 3/4;
+  }
+  .logo {
+    img {
+      width: 26.18px;
+      height: 26.18px;
     }
   }
 }

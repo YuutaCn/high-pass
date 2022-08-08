@@ -10,6 +10,10 @@
     display: none;
   }
 
+  @include small-tablet {
+    display: none;
+  }
+
   .contact__container {
     h2 {
       margin: 0;
