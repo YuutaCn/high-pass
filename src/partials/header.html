@@ -9,5 +9,40 @@
         </picture>
       </a>
     </div>
+    <nav class="header__nav">
+      <ul class="header__nav-ul list-reset">
+        <li class="header__nav-item-1"><a href="#">О студии</a></li>
+        <li class="header__nav-item-2"><a href="#">Наши  проекты</a></li>
+        <li class="header__nav-item-3"><a href="#">Услуги</a></li>
+        <li class="header__nav-item-4"><a href="#">Мастер-классы</a></li>
+        <li class="header__nav-item-5"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <svg class="burger-svg">
+        <use xlink:href="../img/sprite.svg#burger"></use>
+      </svg>
+    </button>
+
+    <div class="header__search visibile-obj">
+      <button class="header__search-button" name="кнопка поиска">
+        <svg class="search-svg">
+          <use xlink:href="../img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <div class="header__search-place hidden-obj">
+        <form action="#" class="form">
+          <label class="form__label">
+            <input class="header__search-input" type="text" placeholder="Что будем искать?">
+          </label>
+          <button class="header__search-close-button">
+            <svg class="close-svg">
+              <use xlink:href="../img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
 </header>

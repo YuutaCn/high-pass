@@ -19,3 +19,27 @@
   // animation
   --default-cubic: cubic-bezier(.26,.45,.3,.84);
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    --content-width: 964px;
+    --container-offset: 30px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --content-width: 712px;
+    --container-offset: 28px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --content-width: 278px;
+    --container-offset: 21px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  }
+}
