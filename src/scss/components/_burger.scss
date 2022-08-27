@@ -1,0 +1,104 @@
+.burger-menu {
+  display: none;
+}
+
+@include mobile {
+.burger-menu {
+  display: block;
+  position: absolute;
+  transform: translateY(calc(-300% - 70px));
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  background-color: var(--black-color);
+  transition: all 400ms var(--default-cubic);
+  &__container {
+    display: grid;
+    grid-template-rows: 18px 243px 57.5px;
+  }
+  &__button {
+    margin-top: 10px;
+    grid-row: 1/1;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background: #808080;
+    .close-burger-svg {
+      width: 8.36px;
+      height: 8.27px;
+      fill:var(--white-color);
+      &:active {
+        fill: var(--harley-orange-color);
+      }
+    }
+  }
+  &__nav {
+    margin-top: 26px;
+    grid-row: 2/2;
+    & a {
+      color: var(--white-color);
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+
+      &:hover {
+        color: var(--burnt-orange-color);
+      }
+
+      &:focus {
+        color: var(--white-color);
+        background: var(--fier-orange-color);
+      }
+
+      &:active {
+        color: var(--harley-orange-color);
+      }
+    }
+    &-ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__phone {
+    grid-row: 3/3;
+    position: absolute;
+    bottom: 38.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5px;
+    .phone-svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--burnt-orange-color);
+    }
+    & a {
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--burnt-orange-color);
+    }
+  }
+}
+
+}
+.menu--active {
+  transform: translateY(0vh);
+  opacity: 1;
+  visibility: visible;
+
+}

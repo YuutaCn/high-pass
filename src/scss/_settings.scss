@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  overflow-y: hidden;
+}
+
 *,
 *::before,
 *::after {
