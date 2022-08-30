@@ -243,6 +243,10 @@
         height: 100%;
         object-fit: cover;
         object-position: 0px -4vh;
+        transition: transform 500ms var(--default-cubic);
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
 
         @include tablet {
           object-position: 0px 0vh;
@@ -279,6 +283,10 @@
         height: 100%;
         object-fit: cover;
         object-position: 0vh -9vh;
+        transition: transform 500ms var(--default-cubic);
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
       }
     }
 
@@ -303,6 +311,10 @@
         height: 100%;
         object-fit: cover;
         object-position: -3vh 0px;
+        transition: transform 500ms var(--default-cubic);
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
       }
 
     }
