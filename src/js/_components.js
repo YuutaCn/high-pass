@@ -1,4 +1,4 @@
 import './components/search'
 import './components/hero'
 import './components/vform'
-import './components/project'
+import './components/map'
