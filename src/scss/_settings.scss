@@ -2,11 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-// body {
-//   width: 100%;
-//   overflow-y: hidden;
-// }
-
 *,
 *::before,
 *::after {
@@ -179,4 +174,18 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+h1 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }

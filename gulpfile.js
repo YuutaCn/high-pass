@@ -249,7 +249,11 @@ const htmlInclude = () => {
       basepath: '@file'
     }))
     .pipe(typograf({
-      locale: ['ru', 'en-US']
+      locale: ['ru', 'en-US'],
+      safeTags: [
+        ['<\\?php', '\\?>'],
+        ['<no-typography>', '</no-typography>']
+    ]
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
