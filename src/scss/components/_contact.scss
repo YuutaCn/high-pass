@@ -13,13 +13,13 @@
 
     @include small-tablet {
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 460px 710px;
+      grid-template-rows: 460px 445px;
       row-gap: 31px;
     }
 
     @include mobile {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 472px 480px;
+      grid-template-rows: 472px 426px;
       row-gap: 30px;
     }
   }
