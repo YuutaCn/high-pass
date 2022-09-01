@@ -1,0 +1,1139 @@
+.project {
+  background: var(--white-color);
+  margin-top: 64px;
+
+  @include mobile {
+    margin-top: 40px;
+  }
+
+  &__h2 {
+    color: var(--black-color);
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 12px;
+
+    @include mobile {
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__hashtag {
+    & a {
+      position: absolute;
+      background: var(--black-color);
+      color: var(--white-color);
+      padding: 6px 14px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      transition: color 300ms var(--default-cubic);
+
+      @include mobile {
+        padding: 4px 14px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &:hover {
+        color: var(--burnt-orange-color);
+      }
+
+      &:focus {
+        color: var(--fier-orange-color);
+        outline: solid 1px var(--burnt-orange-color);
+      }
+
+      &:active {
+        color: var(--harley-orange-color);
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    row-gap: 30px;
+    column-gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 286px 307px 307px;
+      row-gap: 24px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 295px 300px 301px 300px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 272px 272px 272px 422px 296px 292px 424px;
+    }
+
+    &-item {
+      &-1 {
+        grid-column: 1/3;
+        grid-row: 1/1;
+
+        @include tablet {
+          grid-column: 1/3;
+          grid-row: 1/1;
+        }
+
+        @include small-tablet {
+          grid-column: 1/3;
+          grid-row: 1/1;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 1/1;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: 7px;
+          left: 97px;
+
+          @include tablet {
+            left: 124px;
+          }
+
+          @include small-tablet {
+            left: 125px;
+          }
+
+          @include mobile {
+            top: 5px;
+            left: 195px;
+          }
+        }
+
+        &-photo {
+          width: 100%;
+          height: 184px;
+          object-fit: cover;
+          object-position: 0px 0px;
+          margin-bottom: 13px;
+
+          @include tablet {
+            object-position: -27px 0px;
+          }
+
+          @include mobile {
+            object-position: 0px -1px;
+          }
+        }
+
+        &-text {
+
+          &-first {
+
+            @include tablet {
+              display: none;
+            }
+
+            @include mobile {
+              display: none;
+            }
+          }
+
+          &-second {
+            display: none;
+
+            @include tablet {
+              display: block;
+            }
+
+            @include mobile {
+              display: block;
+            }
+          }
+
+          &-first,
+          &-second {
+            a {
+              color: var(--black-color);
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              transition: color 300ms var(--default-cubic);
+
+              @include small-tablet {
+                margin-left: -1px;
+              }
+
+              @include mobile {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+              }
+
+              &:hover {
+                color: var(--burnt-orange-color);
+              }
+
+              &:focus {
+                color: var(--black-color);
+                outline: none;
+                background: var(--tuft-bush-color);
+                padding: 0px 5px;
+              }
+
+              &:active {
+                color: var(--harley-orange-color);
+              }
+            }
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          justify-content: start;
+          align-items: center;
+          margin-top: 11px;
+
+          @include tablet {
+            margin-top: 19px;
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: #999999;
+          }
+
+          & span {
+            color: #999999;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      &-2 {
+        grid-column: 3/5;
+        grid-row: 1/1;
+
+        @include tablet {
+          grid-column: 3/5;
+          grid-row: 1/1;
+        }
+
+        @include small-tablet {
+          grid-column: 3/5;
+          grid-row: 1/1;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 2/2;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: 7px;
+          left: 93.5px;
+
+          @include tablet {
+            left: 121px;
+          }
+
+          @include small-tablet {
+            left: 122px;
+          }
+
+          @include mobile {
+            top: 5px;
+            left: 193px;
+          }
+        }
+
+        &-photo {
+          width: 100%;
+          height: 184px;
+          object-fit: cover;
+          object-position: 0px -5px;
+          margin-bottom: 13px;
+
+          @include tablet {
+            object-position: 0px -15px;
+          }
+
+          @include mobile {
+            object-position: 0px -47px;
+          }
+        }
+
+        &-text {
+
+          &-first {
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          &-second {
+            display: none;
+
+            @include tablet {
+              display: block;
+            }
+          }
+
+          &-first,
+          &-second {
+            a {
+              color: var(--black-color);
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              transition: color 300ms var(--default-cubic);
+
+              @include mobile {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+              }
+
+              &:hover {
+                color: var(--burnt-orange-color);
+              }
+
+              &:focus {
+                color: var(--black-color);
+                outline: none;
+                background: var(--tuft-bush-color);
+                padding: 0px 5px;
+              }
+
+              &:active {
+                color: var(--harley-orange-color);
+              }
+            }
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          justify-content: start;
+          align-items: center;
+          margin-top: 11px;
+
+          @include tablet {
+            margin-top: 19px;
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: #999999;
+          }
+
+          & span {
+            color: #999999;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      &-3 {
+        grid-column: 5/7;
+        grid-row: 1/1;
+
+        @include tablet {
+          grid-column: 5/9;
+          grid-row: 1/1;
+        }
+
+        @include small-tablet {
+          grid-column: 5/7;
+          grid-row: 1/1;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 3/3;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: 7px;
+          left: 90px;
+
+          @include tablet {
+            left: 365px;
+          }
+
+          @include small-tablet {
+            left: 118px;
+          }
+
+          @include mobile {
+            top: 5px;
+            left: 189px;
+          }
+        }
+
+        &-photo {
+          width: 100%;
+          height: 184px;
+          object-fit: cover;
+          object-position: -43px 0px;
+          margin-bottom: 13px;
+
+          @include tablet {
+            object-position: 0px -120px;
+          }
+
+          @include mobile {
+            object-position: 0px 0px;
+          }
+        }
+
+
+        &-text {
+
+          &-first {
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          &-second {
+            display: none;
+
+            @include tablet {
+              display: block;
+            }
+          }
+
+          &-first,
+          &-second {
+            a {
+              color: var(--black-color);
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              transition: color 300ms var(--default-cubic);
+
+              @include mobile {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                position: relative;
+                top: 1px;
+              }
+
+              &:hover {
+                color: var(--burnt-orange-color);
+              }
+
+              &:focus {
+                color: var(--black-color);
+                outline: none;
+                background: var(--tuft-bush-color);
+                padding: 0px 5px;
+              }
+
+              &:active {
+                color: var(--harley-orange-color);
+              }
+            }
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          justify-content: start;
+          align-items: center;
+          margin-top: 11px;
+
+          @include tablet {
+            margin-top: 19px;
+          }
+
+          @include small-tablet {
+            margin-top: 33px;
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: #999999;
+          }
+
+          & span {
+            color: #999999;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      &-4 {
+        grid-column: 7/13;
+        grid-row: 1/1;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px 30px 29px;
+        background-image: url(../img/project-photo4_1x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -87px;
+
+        @include tablet {
+          grid-column: 1/6;
+          grid-row: 2/2;
+          background-position: 0px -72px;
+        }
+
+        @include small-tablet {
+          grid-column: 1/7;
+          grid-row: 2/2;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 4/4;
+          background-position: -142px 0px;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: -13px;
+          left: 538px;
+
+          @include tablet {
+            left: 498px;
+          }
+
+          @include small-tablet {
+            left: 621px;
+          }
+
+          @include mobile {
+            top: -15px;
+            left: 192px;
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          align-items: center;
+          margin-top: 2px;
+          margin-left: 2px;
+
+          @include tablet {
+            margin-top: 10px;
+            margin-left: 3px;
+          }
+
+          @include small-tablet {
+            margin-top: 10px;
+          }
+
+          @include mobile {
+            margin-top: 176px;
+            margin-left: 0px;
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: var(--white-color);
+          }
+
+          & span {
+            color: var(--white-color);
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+
+        &-h3 {
+          width: 293px;
+          margin-top: 2px;
+          margin-bottom: 6px;
+          color: var(--white-color);
+          font-family: 'TT Firs Neue';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 24px;
+
+          @include tablet {
+            margin-left: 2px;
+          }
+
+          @include mobile {
+            width: 219px;
+            margin-top: 7px;
+            margin-left: 0.5px;
+            margin-bottom: 10px;
+
+          }
+        }
+
+        &-text {
+          width: 292px;
+          margin-bottom: 55px;
+          color: var(--white-color);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+
+          @include tablet {
+            margin-left: 2px;
+            margin-bottom: 47px;
+          }
+
+          @include small-tablet {
+            margin-bottom: 47px;
+          }
+
+          @include mobile {
+            width: 218px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      &-5 {
+        grid-column: 1/7;
+        grid-row: 2/2;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px 30px 29px;
+        background-image: url(../img/project-photo5_1x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -87px;
+
+        @include tablet {
+          grid-column: 4/9;
+          grid-row: 3/3;
+        }
+
+        @include small-tablet {
+          grid-column: 1/7;
+          grid-row: 4/4;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 7/7;
+          background-position: -258px 0px;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: -13px;
+          left: 450px;
+
+          @include tablet {
+            left: 411px;
+          }
+
+          @include small-tablet {
+            left: 533px;
+          }
+
+          @include mobile {
+            top: -13px;
+            left: 117px;
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          align-items: center;
+          margin-top: 2px;
+          margin-left: 2px;
+
+          @include tablet {
+            margin-top: 10px;
+          }
+
+          @include small-tablet {
+            margin-top: 10px;
+          }
+
+          @include mobile {
+            margin-top: 179px;
+            margin-left: 0px;
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: var(--white-color);
+
+            @include mobile {
+              position: relative;
+              left: 1px;
+            }
+          }
+
+          & span {
+            color: var(--white-color);
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+
+        &-h3 {
+          width: 293px;
+          margin-top: 2px;
+          margin-bottom: 6px;
+          color: var(--white-color);
+          font-family: 'TT Firs Neue';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 24px;
+
+          @include tablet {
+            margin-left: 2px;
+          }
+
+          @include mobile {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+
+        &-text {
+          width: 292px;
+          margin-bottom: 100px;
+          color: var(--white-color);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+
+          @include tablet {
+            margin-left: 2px;
+            margin-top: -2px;
+            margin-bottom: 102px;
+          }
+
+          @include small-tablet {
+            margin-bottom: 93px;
+          }
+
+          @include mobile {
+            width: 218px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 22px;
+
+          }
+        }
+
+        @include tablet {
+          &-button {
+            margin-left: 1px !important;
+          }
+        }
+      }
+
+      &-6 {
+        grid-column: 7/10;
+        grid-row: 2/2;
+
+        @include tablet {
+          grid-column: 6/9;
+          grid-row: 2/2;
+        }
+
+        @include small-tablet {
+          grid-column: 1/4;
+          grid-row: 3/3;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 5/5;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: 7px;
+          left: 208px;
+
+          @include tablet {
+            left: 249px;
+          }
+
+          @include small-tablet {
+            left: 250px;
+          }
+
+          @include mobile {
+            top: 5px;
+            left: 196px;
+          }
+        }
+
+        &-photo {
+          width: 100%;
+          height: 184px;
+          object-fit: cover;
+          object-position: 0px 0px;
+          margin-bottom: 13px;
+
+          @include tablet {
+            object-position: -5px 0px;
+          }
+
+          @include small-tablet {
+            object-position: -5px 0px;
+          }
+
+          @include mobile {
+            object-position: -37px 0px;
+          }
+        }
+
+        &-text {
+
+          &-first {}
+
+          &-second {
+            display: none;
+          }
+
+          &-first,
+          &-second {
+            a {
+              color: var(--black-color);
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              transition: color 300ms var(--default-cubic);
+
+              @include small-tablet {
+                margin-left: -1px;
+              }
+
+              @include mobile {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                position: relative;
+                left: 2px;
+              }
+
+              &:hover {
+                color: var(--burnt-orange-color);
+              }
+
+              &:focus {
+                color: var(--black-color);
+                outline: none;
+                background: var(--tuft-bush-color);
+                padding: 0px 5px;
+              }
+
+              &:active {
+                color: var(--harley-orange-color);
+              }
+            }
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          align-items: center;
+          margin-top: 10px;
+
+          @include tablet {
+            margin-top: 19px;
+          }
+
+          @include small-tablet {
+            margin-top: 19px;
+          }
+
+          @include mobile {
+
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: #999999;
+          }
+
+          & span {
+            color: #999999;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      &-7 {
+        grid-column: 10/13;
+        grid-row: 2/2;
+
+        @include tablet {
+          grid-column: 1/4;
+          grid-row: 3/3;
+        }
+
+        @include small-tablet {
+          grid-column: 4/7;
+          grid-row: 3/3;
+        }
+
+        @include mobile {
+          grid-column: 1/3;
+          grid-row: 6/6;
+        }
+
+        & .project__hashtag {
+          position: relative;
+          top: 7px;
+          left: 204px;
+
+          @include tablet {
+            left: 246px;
+          }
+
+          @include small-tablet {
+            left: 245px;
+          }
+
+          @include mobile {
+            top: 5px;
+            left: 193px;
+          }
+        }
+
+        &-photo {
+          width: 100%;
+          height: 184px;
+          object-fit: cover;
+          object-position: 0px 0px;
+          margin-bottom: 13px;
+
+          @include tablet {
+            object-position: 0px -22px;
+          }
+
+          @include small-tablet {
+            object-position: 0px -22px;
+          }
+
+          @include mobile {
+            object-position: 0px -2px;
+          }
+        }
+
+        &-text {
+
+          &-first {}
+
+          &-second {
+            display: none;
+          }
+
+          &-first,
+          &-second {
+            a {
+              color: var(--black-color);
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              transition: color 300ms var(--default-cubic);
+
+              @include small-tablet {
+                margin-left: 1px;
+              }
+
+              @include mobile {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                position: relative;
+                left: 1px;
+              }
+
+              &:hover {
+                color: var(--burnt-orange-color);
+              }
+
+              &:focus {
+                color: var(--black-color);
+                outline: none;
+                background: var(--tuft-bush-color);
+                padding: 0px 5px;
+              }
+
+              &:active {
+                color: var(--harley-orange-color);
+              }
+            }
+          }
+        }
+
+        &-date {
+          display: flex;
+          gap: 5.17px;
+          align-items: center;
+          margin-top: 10px;
+
+          @include tablet {
+            margin-top: 19px;
+          }
+
+          @include small-tablet {
+            margin-top: 18px;
+            margin-left: 2px;
+          }
+
+          .project__date {
+            width: 12.67px;
+            height: 12.83px;
+            fill: #999999;
+          }
+
+          & span {
+            color: #999999;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 121px;
+  height: 50px;
+  background: #ff6d2e00;
+  border: solid 3px var(--burnt-orange-color);
+  color: var(--white-color);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  transition: all 300ms var(--default-cubic);
+  outline: solid 0px var(--burnt-orange-color);
+
+  @include tablet {
+    margin-left: 2px;
+  }
+
+  @include mobile {
+    width: 109px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:hover {
+    background: var(--burnt-orange-color);
+    border: solid 0px var(--burnt-orange-color);
+  }
+
+  &:focus {
+    background: var(--fier-orange-color);
+    border: solid 0px var(--burnt-orange-color);
+    outline: solid 3px var(--burnt-orange-color);
+  }
+
+  &:active {
+    &:hover {
+      background: var(--harley-orange-color);
+      border: solid 0px var(--harley-orange-color);
+    }
+  }
+}

@@ -1,0 +1,567 @@
+.contact {
+  width: 100%;
+  background: var(--white-color);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 460px 445px;
+      row-gap: 31px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 472px 426px;
+      row-gap: 30px;
+    }
+  }
+
+  &__h2 {
+    margin: 63px 0px 22px 0px;
+    color: var(--black-color);
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+
+    @include tablet {
+      margin: 68px 0px 20px 0px !important;
+    }
+
+    @include small-tablet {
+      margin: 68px 0px 20px 0px;
+    }
+
+    @include mobile {
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      margin: 50px 0px 14px 0px;
+    }
+  }
+
+  &__map {
+    grid-column: 1/9;
+    width: 850px;
+    height: 460px;
+
+    @include tablet {
+      grid-column: 1/6;
+      width: 590px !important;
+      height: 460px !important;
+    }
+
+    @include small-tablet {
+      grid-column: 1/7;
+      width: 714px !important;
+      height: 460px !important;
+    }
+
+    @include mobile {
+      grid-column: 1/3;
+      width: 100vw;
+      height: 472px !important;
+      position: absolute;
+      left: 0px;
+    }
+
+    &-control {
+      width: 410px;
+      height: 460px;
+      background: rgba(32, 32, 32, 0.85);
+
+      @include tablet {
+        width: 590px;
+        height: 157px;
+      }
+
+      @include small-tablet {
+        width: 714px;
+        height: 157px;
+      }
+
+      @include mobile {
+        width: 100vw;
+        height: 157px;
+      }
+
+      &-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        position: relative;
+        left: 60px;
+
+        @include tablet {
+          left: 30px;
+        }
+
+        @include small-tablet {
+          left: 30px;
+        }
+
+        @include mobile {
+          left: 19px;
+        }
+      }
+
+      & .closeButton {
+        position: relative;
+        z-index: 9999999;
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+
+        @include mobile {
+          position: relative;
+          right: 7px;
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+          background: #999999;
+          border: none;
+          border-radius: 50%;
+          padding: 0;
+          margin: 0;
+          transition: all 300ms var(--default-cubic);
+
+          @include mobile {
+
+            &:hover {
+              transform: scale(1);
+              border: solid 0px var(--tuft-bush-color);
+
+              svg {
+                fill: var(--burnt-orange-color);
+                width: 9.28px;
+                height: 9.19px;
+              }
+            }
+
+            &:focus {
+              transform: scale(1);
+              outline: solid 0px var(--burnt-orange-color);
+
+              svg {
+                fill: var(--burnt-orange-color);
+                width: 9.28px;
+                height: 9.19px;
+              }
+            }
+          }
+
+          &:hover {
+            transform: scale(1.2);
+            border: solid 0.5px var(--tuft-bush-color);
+
+            svg {
+              fill: var(--burnt-orange-color);
+              width: 15px;
+              height: 15px;
+            }
+          }
+
+          &:focus {
+            transform: scale(1.2);
+            outline: solid 1px var(--burnt-orange-color);
+
+            svg {
+              fill: var(--burnt-orange-color);
+              width: 15px;
+              height: 15px;
+            }
+          }
+
+          svg {
+            width: 9.28px;
+            height: 9.19px;
+            fill: var(--white-color);
+            transition: all 300ms var(--default-cubic);
+          }
+        }
+      }
+    }
+
+    &-title {
+      color: var(--white-color);
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 22px;
+      position: relative;
+      top: 9px;
+
+      @include mobile {
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        top: -6px;
+      }
+    }
+
+    &-text {
+      color: #CACACA;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      width: 275px;
+      position: relative;
+      top: 14px;
+
+      @include mobile {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        top: 5px;
+        width: 267px;
+      }
+    }
+
+    &-link {
+      color: var(--burnt-orange-color);
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      position: relative;
+      top: 16px;
+      left: 2px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      transition: color 300ms var(--default-cubic);
+
+      @include tablet {
+        left: 150px;
+        top: -10px;
+      }
+
+      @include small-tablet {
+        left: 150px;
+        top: -10px;
+      }
+
+      @include mobile {
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        top: 17.5px;
+        left: 1px;
+        gap: 2px;
+      }
+
+      &:hover {
+        color: var(--bittersweet-color);
+
+        & .contact-phone {
+          fill: var(--bittersweet-color);
+        }
+      }
+
+      &:focus {
+        color: var(--bittersweet-color);
+        outline: solid 1px var(--bittersweet-color);
+
+        & .contact-phone {
+          fill: var(--bittersweet-color);
+        }
+      }
+
+      &:active {
+        color: var(--harley-orange-color);
+
+        & .contact-phone {
+          fill: var(--harley-orange-color);
+        }
+      }
+
+      & .contact-phone {
+        width: 16.5px;
+        height: 16.5px;
+        fill: var(--burnt-orange-color);
+        transition: fill 300ms var(--default-cubic);
+      }
+
+    }
+
+  }
+
+  &__form {
+    grid-column: 9/13;
+
+    @include tablet {
+      grid-column: 6/9;
+    }
+
+    @include small-tablet {
+      grid-column: 1/5;
+      grid-row: 2/2;
+    }
+
+    @include mobile {
+      grid-column: 1/3;
+      grid-row: 2/2;
+      width: 278px;
+    }
+
+    &-h3 {
+      color: var(--black-color);
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 22px;
+      position: relative;
+      top: -6px;
+
+      @include mobile {
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &-text {
+      position: relative;
+      top: -1px;
+      color: #999999;
+      margin-bottom: 13px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      @include mobile {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 16px;
+      }
+    }
+
+    &-name,
+    &-email {
+      width: 100%;
+      height: 50px;
+      padding: 0px 23px;
+      border: none;
+      outline: none;
+      background: #E9E9E9;
+      color: var(--black-color);
+      margin-bottom: 20px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      @include mobile {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        height: 40px;
+      }
+
+      &::placeholder {
+        transition: color 300ms var(--default-cubic);
+      }
+
+      &:hover {
+
+        &::placeholder {
+          color: var(--burnt-orange-color);
+        }
+      }
+
+      &:focus {
+        outline: solid 1px var(--burnt-orange-color);
+
+        &::placeholder {
+          color: #999999;
+        }
+      }
+    }
+
+    &-comment {
+      width: 100%;
+      height: 150px;
+      resize: none;
+      padding: 15px 23px;
+      border: none;
+      outline: none;
+      background: #E9E9E9;
+      color: var(--black-color);
+      margin-bottom: 16px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      @include mobile {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 13px 23px;
+      }
+
+      &::placeholder {
+        transition: color 300ms var(--default-cubic);
+      }
+
+      &:hover {
+
+        &::placeholder {
+          color: var(--burnt-orange-color);
+        }
+      }
+
+      &:focus {
+        outline: solid 1px var(--burnt-orange-color);
+
+        &::placeholder {
+          color: #999999;
+        }
+      }
+    }
+
+    &-button {
+      width: 126px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--white-color);
+      background-color: var(--burnt-orange-color);
+      border: none;
+      outline: none;
+      transition: background-color 300ms var(--default-cubic);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+
+      @include tablet {
+        position: relative;
+        top: 1px;
+        left: -1px;
+      }
+
+      @include small-tablet {
+        position: relative;
+        top: 1px;
+      }
+
+      @include mobile {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        width: 115px;
+        height: 40px;
+      }
+
+      &:hover {
+        background-color: var(--fier-orange-color);
+      }
+
+      &:focus {
+        outline: var(--harley-orange-color);
+      }
+
+      &:active {
+        background-color: var(--harley-orange-color);
+      }
+    }
+  }
+}
+
+
+
+.ymaps-2-1-79-gotoymaps__container,
+.ymaps-2-1-79-gototaxi__container,
+.ymaps-2-1-79-gototech,
+.ymaps-2-1-79-copyright,
+.ymaps-2-1-79-copyright_logo_no {
+  display: none !important;
+}
+
+.ymaps-2-1-79-ground-pane {
+  filter: grayscale(1);
+}
+
+.ymaps-2-1-79-controls__control_toolbar {
+  position: relative !important;
+  top: -10px !important;
+  left: -430px !important;
+
+  @include tablet {
+    top: 295px !important;
+    left: 10px !important;
+  }
+
+  @include small-tablet {
+    top: 295px !important;
+    left: 10px !important;
+  }
+
+  @include mobile {
+    top: 305px !important;
+    left: 10px !important;
+  }
+}
+
+.contact__form {
+
+  & .just-validate-error-label {
+    color: var(--red-orange-color) !important;
+    margin-top: -65px;
+
+    @include mobile {
+      margin-top: -58px;
+    }
+  }
+
+  & .just-validate-error-field {
+    outline: solid 1px var(--bittersweet-color);
+  }
+}
