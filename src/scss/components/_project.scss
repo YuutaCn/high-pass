@@ -53,6 +53,7 @@
 
       &:focus {
         color: var(--fier-orange-color);
+        outline: solid 1px var(--burnt-orange-color);
       }
 
       &:active {
