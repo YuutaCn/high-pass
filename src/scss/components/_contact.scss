@@ -143,6 +143,31 @@
           margin: 0;
           transition: all 300ms var(--default-cubic);
 
+          @include mobile {
+
+            &:hover {
+              transform: scale(1);
+              border: solid 0px var(--tuft-bush-color);
+
+              svg {
+                fill: var(--burnt-orange-color);
+                width: 9.28px;
+                height: 9.19px;
+              }
+            }
+
+            &:focus {
+              transform: scale(1);
+              outline: solid 0px var(--burnt-orange-color);
+
+              svg {
+                fill: var(--burnt-orange-color);
+                width: 9.28px;
+                height: 9.19px;
+              }
+            }
+          }
+
           &:hover {
             transform: scale(1.2);
             border: solid 0.5px var(--tuft-bush-color);
@@ -511,17 +536,32 @@
 
   @include tablet {
     top: 295px !important;
-    left: 11px !important;
+    left: 10px !important;
   }
 
   @include small-tablet {
     top: 295px !important;
-    left: 11px !important;
+    left: 10px !important;
   }
 
   @include mobile {
     top: 305px !important;
     left: 10px !important;
   }
+}
 
+.contact__form {
+
+  & .just-validate-error-label {
+    color: var(--red-orange-color) !important;
+    margin-top: -65px;
+
+    @include mobile {
+      margin-top: -58px;
+    }
+  }
+
+  & .just-validate-error-field {
+    outline: solid 1px var(--bittersweet-color);
+  }
 }

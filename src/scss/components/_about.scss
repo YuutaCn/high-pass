@@ -288,6 +288,18 @@
   font-weight: 400;
   font-size: 9px;
   line-height: 11px;
+
+  @include tablet {
+    margin-top: -65px;
+  }
+
+  @include small-tablet {
+    margin-top: -65px;
+  }
+
+  @include mobile {
+    margin-top: -59px;
+  }
 }
 
 
