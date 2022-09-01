@@ -4,36 +4,24 @@ ymaps.ready(['Panel']).then(function () {
     zoom: 14,
     controls: []
   });
-  // Создадим контент для меток.
-  var office = '<h3 class="map__title">Студия «High pass»</h3> + <p class="map__text">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p> + <a class="map__link" href="tel:+749542423532"><img src="img/telMap.svg" alt="Телефонная трубка">+7 495 424-23-532</a>';
-  // Создадим и добавим панель на карту.
+  var office = '<h3 class="contact__map-title">Студия «High pass»</h3> <p class="contact__map-text">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p> <a class="contact__map-link" href="tel:+749542423532"><svg class="contact-phone"><use xlink:href="../img/sprite.svg#phone"></use></svg>+7 495 424-23-532</a>';
   var panel = new ymaps.Panel();
   map.controls.add(panel, {
-    // float: 'left'
   });
-  // Создадим коллекцию геообъектов.
   var collection = new ymaps.GeoObjectCollection(null, {
-    // Запретим появление балуна.
     hasBalloon: false,
     iconLayout: 'default#image',
-    iconImageHref: 'img/dot.svg',
+    iconImageHref: 'img/svg/marker.svg',
     iconImageSize: [12, 12],
     iconImageOffset: [7, 5],
   });
-  // Добавим геообъекты в коллекцию.
   collection
   .add(new ymaps.Placemark([55.769651, 37.639383], {
     balloonContent: office
   }));
-  // Добавим коллекцию на карту.
   map.geoObjects.add(collection);
-  // Подпишемся на событие клика по коллекции.
   collection.events.add('click', function (e) {
-    // Получим ссылку на геообъект, по которому кликнул пользователь.
     var target = e.get('target');
-    // Зададим контент боковой панели.
     panel.setContent(target.properties.get('balloonContent'));
-    // Переместим центр карты по координатам метки с учётом заданных отступов.
-    // map.panTo(target.geometry.getCoordinates(), { useMapMargin: true });
   });
 });
